@@ -1,0 +1,30 @@
+{
+  "name": "stafffetch",
+  "version": "1.0.0",
+  "description": "Simple way to display your staff members publicly",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XeliteXirish/StaffFetch.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "staff"
+  ],
+  "author": "Shaun O'Neill (XeltieXirish)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XeliteXirish/StaffFetch/issues"
+  },
+  "homepage": "https://github.com/XeliteXirish/StaffFetch#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "express": "^4.16.3",
+    "body-parser": "latest",
+    "cors": "latest"
+  }
+}

@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+node_modules/
+.idea/
+config.js
+src/config.json
+selfbot.sqlite
+/config.json
+src/static/files/*
+.vscode/
+
+/src/testing.js
