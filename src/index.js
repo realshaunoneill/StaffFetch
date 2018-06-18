@@ -61,7 +61,8 @@ app.get('*', (req, res) => {
             owners = [...owners, ...role.members.map(m => {
                 return {
                     id: m.user.id,
-                    username: m.user.tag,
+                    username: m.user.username,
+                    tag: m.user.tag,
                     picture: m.user.displayAvatarURL,
                     quote: quotes[m.user.id] || `None supplied!`
                 }
@@ -73,7 +74,8 @@ app.get('*', (req, res) => {
             admins = [...admins, role.members.map(m => {
                 return {
                     id: m.user.id,
-                    username: m.user.tag,
+                    username: m.user.username,
+                    tag: m.user.tag,
                     picture: m.user.displayAvatarURL,
                     quote: quotes[m.user.id] || `None supplied!`
                 }
@@ -85,14 +87,15 @@ app.get('*', (req, res) => {
             mods = [...mods, ...role.members.map(m => {
                 return {
                     id: m.user.id,
-                    username: m.user.tag,
+                    username: m.user.username,
+                    tag: m.user.tag,
                     picture: m.user.displayAvatarURL,
                     quote: quotes[m.user.id] || `None supplied!`
                 }
             })];
         });
 
-        let results = {owner: owners, admins: admins, mods: mods};
+        let results = {owners: owners, admins: admins, mods: mods};
 
         res.status(200).json(results);
 
