@@ -71,7 +71,7 @@ app.get('*', (req, res) => {
 
         config.adminRoles.forEach(roleID => {
             let role = guild.roles.get(roleID);
-            admins = [...admins, role.members.map(m => {
+            admins = [...admins, ...role.members.map(m => {
                 return {
                     id: m.user.id,
                     username: m.user.username,
