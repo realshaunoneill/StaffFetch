@@ -64,7 +64,8 @@ app.get('*', (req, res) => {
                     username: m.user.username,
                     tag: m.user.tag,
                     picture: m.user.displayAvatarURL,
-                    quote: quotes[m.user.id] || `None supplied!`
+                    quote: quotes[m.user.id] || `None supplied!`,
+                    status: m.user.presence.status || 'offline'
                 }
             })];
         });
@@ -77,7 +78,8 @@ app.get('*', (req, res) => {
                     username: m.user.username,
                     tag: m.user.tag,
                     picture: m.user.displayAvatarURL,
-                    quote: quotes[m.user.id] || `None supplied!`
+                    quote: quotes[m.user.id] || `None supplied!`,
+                    status: m.user.presence.status || 'offline'
                 }
             })];
         });
