@@ -97,6 +97,14 @@ app.get('*', (req, res) => {
             })];
         });
 
+        // Filter roles
+        mods = mods.filter(s => {
+            return admins.every(staff => staff.id !== s.id)
+        });
+        admins = admins.filter(s => {
+            return owners.every(staff => staff.id !== s.id)
+        });
+
         let results = {owners: owners, admins: admins, mods: mods};
 
         res.status(200).json(results);
