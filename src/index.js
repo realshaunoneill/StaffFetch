@@ -41,6 +41,8 @@ client.on('message', message => {
     quotes[authorID] = msgSplit.join(' ');
 
     console.info(`Saved new quote for *${message.author.tag}* - ${msgSplit.join(' ')}`);
+    message.reply(`Saved new quote for *${message.author.tag}* - ${msgSplit.join(' ')}`).catch(e => {
+    });
 
     saveQuotesToFile();
 });
